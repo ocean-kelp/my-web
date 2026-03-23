@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useTheme } from "next-themes";
 
 export default function MouseSpotlight() {
-  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const mouseX = useMotionValue(-1000);
   const mouseY = useMotionValue(-1000);
@@ -26,7 +24,7 @@ export default function MouseSpotlight() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
-  if (!mounted || resolvedTheme !== "dark") return null;
+  if (!mounted) return null;
 
   return (
     <motion.div

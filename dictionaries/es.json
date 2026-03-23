@@ -19,5 +19,17 @@
     "noProjects": "No se encontraron proyectos para el portafolio. Agrega el topic 'portfolio' a tus repositorios de GitHub.",
     "example": "Ejemplo: Edita los detalles de tu repositorio en GitHub y agrega 'portfolio' en Topics.",
     "noDescription": "Sin descripción proporcionada."
+  },
+  "about_details": {
+    "title": "Sobre mí",
+    "bio": "Más allá de la ingeniería de software, siento una profunda pasión por la biología y el mundo natural, especialmente por el océano y la vida marina. Cuando no estoy programando, suelo armar cubos de Rubik o tocar guitarra clásica—mi repertorio incluye el Bourrée de Bach, Libertango de Piazzolla y piezas árabe-españolas como Capricho Árabe y Asturias.",
+    "achievements_title": "Educación y Logros",
+    "achievements": [
+      "Graduado de la Universidad de los Andes (Uniandes)",
+      "Ganador de la prestigiosa Beca Nacional 'Generación E'",
+      "2do Puesto en la Hackathon de Web 3.0"
+    ],
+    "contact": "Contáctame",
+    "email": "koren.yin@outlook.es"
   }
 }

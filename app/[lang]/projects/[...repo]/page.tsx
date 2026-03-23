@@ -5,7 +5,6 @@ import { getRepoMarkdown } from '@/lib/github';
 import { getDictionary } from '@/lib/dictionaries';
 import { notFound } from 'next/navigation';
 import FadeIn from '@/components/FadeIn';
-import ThemeToggle from '@/components/ThemeToggle';
 import LanguageToggle from '@/components/LanguageToggle';
 
 const GithubIcon = () => (
@@ -41,7 +40,6 @@ export default async function ProjectPage({
             <span className="hidden sm:inline">{repoFullName}</span>
             <div className="w-px h-4 bg-slate-300 dark:bg-slate-700 hidden sm:block"></div>
             <LanguageToggle currentLang={lang} />
-            <ThemeToggle />
           </div>
         </div>
       </nav>
