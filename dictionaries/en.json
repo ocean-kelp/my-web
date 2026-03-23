@@ -1,0 +1,23 @@
+{
+  "navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "back": "← Back to Portfolio"
+  },
+  "hero": {
+    "available": "Available for new opportunities",
+    "role": "Software Engineer & DevOps Specialist",
+    "description": "Based in Bogotá, Colombia. I specialize in building scalable architectures, automating infrastructure with Kubernetes and CI/CD pipelines, and developing robust platforms using modern stacks (React, NestJS, Python, AWS).",
+    "viewProjects": "View Projects",
+    "downloadCv": "Download CV",
+    "cvLink": "/cd-en.pdf"
+  },
+  "projects": {
+    "title": "Featured Work",
+    "subtitle": "A collection of my recent projects and contributions.",
+    "noProjects": "No portfolio projects found. Add the 'portfolio' topic to your GitHub repositories.",
+    "example": "Example: Edit your repo details on GitHub and add 'portfolio' to Topics.",
+    "noDescription": "No description provided."
+  }
+}

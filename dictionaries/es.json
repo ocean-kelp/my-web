@@ -1,0 +1,23 @@
+{
+  "navigation": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "resume": "CV",
+    "back": "← Volver al Portafolio"
+  },
+  "hero": {
+    "available": "Disponible para nuevas oportunidades",
+    "role": "Ingeniero de Software y Especialista DevOps",
+    "description": "Basado en Bogotá, Colombia. Me especializo en construir arquitecturas escalables, automatizar infraestructura con Kubernetes y pipelines CI/CD, y desarrollar plataformas robustas utilizando stacks modernos (React, NestJS, Python, AWS).",
+    "viewProjects": "Ver Proyectos",
+    "downloadCv": "Descargar CV",
+    "cvLink": "/cd-es.pdf"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una colección de mis proyectos y contribuciones recientes.",
+    "noProjects": "No se encontraron proyectos para el portafolio. Agrega el topic 'portfolio' a tus repositorios de GitHub.",
+    "example": "Ejemplo: Edita los detalles de tu repositorio en GitHub y agrega 'portfolio' en Topics.",
+    "noDescription": "Sin descripción proporcionada."
+  }
+}
