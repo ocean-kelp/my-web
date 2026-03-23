@@ -32,13 +32,13 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
             <div className="inline-block px-3 py-1 mb-6 rounded-full border border-teal-500/30 dark:border-teal-500/20 bg-teal-50 dark:bg-teal-900/30 text-xs font-semibold tracking-wide text-teal-700 dark:text-teal-200 transition-colors">
               {dict.hero.available}
             </div>
-            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6 bg-linear-to-r from-teal-500 via-cyan-600 to-blue-600 dark:flashlight-text-gradient bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6 bg-linear-to-r from-teal-500 via-cyan-600 to-blue-600 dark:from-teal-200 dark:via-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
               Ronald Díaz
             </h1>
-            <h2 className="text-2xl sm:text-3xl text-slate-700 dark:flashlight-text mb-8 font-medium">
+            <h2 className="text-2xl sm:text-3xl text-slate-700 dark:text-teal-100/90 mb-8 font-medium">
               {dict.hero.role}
             </h2>
-            <p className="max-w-2xl text-lg text-slate-600 dark:flashlight-text leading-relaxed mb-10">
+            <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-10">
               {dict.hero.description}
             </p>
             <div className="flex gap-4">

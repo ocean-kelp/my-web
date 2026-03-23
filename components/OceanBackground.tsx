@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState, useMemo } from "react";
 
 // Dotted shapes mapped using simple grid coordinates (x,y)
@@ -65,7 +65,9 @@ const CORAL_POINTS = [
 
 export default function OceanBackground() {
   const [mounted, setMounted] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const { scrollY } = useScroll();
+  const backgroundOpacity = useTransform(scrollY, [50, 850], [1, 0]);
+  const sunlightOpacity = useTransform(scrollY, [50, 600], [1, -0.5]);
 
   // We use useMemo to cache all random starting variables so they DO NOT change 
   // and cause chaotic jumping when the user scrolls!
@@ -109,28 +111,23 @@ export default function OceanBackground() {
 
   useEffect(() => {
     setMounted(true);
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!mounted) return null;
 
-  const depthDarkness = Math.min(Math.max(scrollY - 50, 0) / 800, 1);
-
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden bg-slate-50 dark:bg-slate-950 pointer-events-none transition-colors duration-700">
       {/* Light Mode: Gentle water surface. Dark Mode: Deep sea gradient fading on scroll */}
-      <div 
+      <motion.div 
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-sky-400/20 via-slate-50 to-slate-100 dark:from-teal-900/20 dark:via-slate-950/80 dark:to-slate-950 transition-colors duration-700"
-        style={{ opacity: 1 - depthDarkness }}
-      ></div>
+        style={{ opacity: backgroundOpacity }}
+      ></motion.div>
       
       {/* Sunlight glow at the top */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-[30vh] bg-linear-to-b from-sky-200/50 dark:from-teal-900/30 to-transparent transition-opacity duration-700"
-        style={{ opacity: 1 - depthDarkness * 1.5 }}
-      ></div>
+      <motion.div 
+        className="absolute top-0 left-0 right-0 h-[30vh] bg-linear-to-b from-sky-200/50 dark:from-teal-900/30 to-transparent transition-colors duration-700"
+        style={{ opacity: sunlightOpacity }}
+      ></motion.div>
 
       {/* Bioluminescent glow at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-[50vh] bg-linear-to-t from-cyan-900/10 to-transparent dark:opacity-100 opacity-0 transition-opacity duration-700"></div>

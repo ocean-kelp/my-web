@@ -50,7 +50,7 @@ export default async function ProjectPage({
         <FadeIn delay={0.1}>
           <div className="mb-12 border-b border-slate-200 dark:border-teal-900/30 pb-8 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight mb-2 text-slate-900 dark:flashlight-text-gradient">{repoFullName}</h1>
+              <h1 className="text-4xl font-bold tracking-tight mb-2 text-slate-900 dark:text-teal-50">{repoFullName}</h1>
               <p className="text-slate-500 dark:text-teal-200/50 font-mono text-sm">github.com/{repoFullName}</p>
             </div>
             <a 
